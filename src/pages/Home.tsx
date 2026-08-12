@@ -1,0 +1,3 @@
+import { Button, Card } from '../components/ui';
+type Destination = 'Analyze' | 'Search';
+export default function Home({go}:{go:(p:Destination)=>void}){return <div className="grid gap-5 md:grid-cols-2"><Card><h1 className="text-4xl font-black text-emerald-900">Ingredient clarity, with uncertainty shown.</h1><p className="my-4 text-slate-700">Upload a label or paste ingredients. Strict logic flags not-halal first, then unresolved ingredients.</p><Button onClick={()=>go('Analyze')}>Analyze ingredients</Button></Card><Card><h2 className="text-2xl font-bold">Try demo products</h2><p className="mb-4">Search by product, brand, ingredient, or barcode.</p><Button variant="secondary" onClick={()=>go('Search')}>Open search</Button></Card></div>}
