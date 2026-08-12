@@ -1,0 +1,1 @@
+export async function scanBarcode(): Promise<never> { throw new Error(import.meta.env.VITE_BARCODE_ENDPOINT ? 'Camera scanner UI is not implemented; endpoint is reserved for future integration.' : 'Barcode scanner is unavailable: no scanner/API configuration is present. Enter a barcode in Search instead.'); }
